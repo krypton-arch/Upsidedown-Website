@@ -10,11 +10,13 @@ function DownloadSection() {
     }, []);
 
     const handleDownload = () => {
-        // Trigger download
+        // Trigger download from GitHub raw URL
         const link = document.createElement('a');
-        link.href = '/upside-down-communicator.apk';
-        link.download = 'upside-down-communicator.apk';
+        link.href = 'https://raw.githubusercontent.com/krypton-arch/UpsideDownCommunicator/main/UpsideDownCommunicator.apk';
+        link.setAttribute('download', 'UpsideDownCommunicator.apk');
+        document.body.appendChild(link);
         link.click();
+        document.body.removeChild(link);
 
         // Update counter
         const newCount = downloadCount + 1;
