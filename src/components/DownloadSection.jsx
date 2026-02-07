@@ -12,7 +12,7 @@ function DownloadSection() {
     const handleDownload = () => {
         // Trigger download from GitHub raw URL
         const link = document.createElement('a');
-        link.href = 'https://raw.githubusercontent.com/krypton-arch/UpsideDownCommunicator/main/UpsideDownCommunicator.apk';
+        link.href = 'https://github.com/krypton-arch/UpsideDownCommunicator/blob/main/UpsideDownCommunicator.apk';
         link.setAttribute('download', 'UpsideDownCommunicator.apk');
         document.body.appendChild(link);
         link.click();
