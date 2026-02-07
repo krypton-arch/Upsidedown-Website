@@ -1,0 +1,25 @@
+.mission-briefing {
+    padding: 60px 0;
+}
+
+.mission-briefing h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.mission-briefing .terminal-prompt {
+    min-height: 300px;
+}
+
+.mission-briefing .line {
+    margin-bottom: 8px;
+}
+
+.mission-briefing .line.error {
+    color: var(--retro-red);
+}
+
+.mission-briefing .line.success {
+    color: var(--retro-green);
+    text-shadow: 0 0 10px var(--retro-green);
+}

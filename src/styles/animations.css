@@ -1,0 +1,313 @@
+/* ===================================
+   ANIMATIONS
+   =================================== */
+
+/* Typing Cursor */
+@keyframes blink {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+.cursor {
+    display: inline-block;
+    width: 12px;
+    height: 24px;
+    background: var(--retro-green);
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+/* Screen Flicker */
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    92% {
+        opacity: 1;
+    }
+
+    93% {
+        opacity: 0.8;
+    }
+
+    94% {
+        opacity: 1;
+    }
+
+    97% {
+        opacity: 0.9;
+    }
+}
+
+.flicker {
+    animation: flicker 3s infinite;
+}
+
+/* Glitch Effect */
+@keyframes glitch {
+    0% {
+        transform: translate(0);
+    }
+
+    20% {
+        transform: translate(-3px, 3px);
+    }
+
+    40% {
+        transform: translate(-3px, -3px);
+    }
+
+    60% {
+        transform: translate(3px, 3px);
+    }
+
+    80% {
+        transform: translate(3px, -3px);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes glitch-text {
+    0% {
+        text-shadow:
+            -2px 0 var(--retro-red),
+            2px 0 var(--retro-amber);
+    }
+
+    25% {
+        text-shadow:
+            2px 0 var(--retro-red),
+            -2px 0 var(--retro-amber);
+    }
+
+    50% {
+        text-shadow:
+            -2px 0 var(--retro-amber),
+            2px 0 var(--retro-red);
+    }
+
+    75% {
+        text-shadow:
+            2px 0 var(--retro-amber),
+            -2px 0 var(--retro-red);
+    }
+
+    100% {
+        text-shadow:
+            -2px 0 var(--retro-red),
+            2px 0 var(--retro-amber);
+    }
+}
+
+.glitch {
+    animation: glitch 0.3s infinite;
+}
+
+.glitch-text {
+    animation: glitch-text 0.3s infinite;
+}
+
+.glitch-hover:hover {
+    animation: glitch 0.3s infinite;
+}
+
+.glitch-text-hover:hover {
+    animation: glitch-text 0.3s infinite;
+}
+
+/* Pulse */
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 5px currentColor;
+    }
+
+    50% {
+        opacity: 0.5;
+        box-shadow: 0 0 20px currentColor;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Warning Flash */
+@keyframes warning-flash {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}
+
+.warning-flash {
+    animation: warning-flash 0.5s infinite;
+}
+
+/* Float Animation */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Text Glow */
+@keyframes text-glow {
+
+    0%,
+    100% {
+        text-shadow:
+            0 0 5px var(--retro-green),
+            0 0 10px var(--retro-green);
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px var(--retro-green),
+            0 0 20px var(--retro-green),
+            0 0 30px var(--retro-green);
+    }
+}
+
+.text-glow {
+    animation: text-glow 2s ease-in-out infinite;
+}
+
+/* Noise Effect */
+@keyframes noise {
+
+    0%,
+    100% {
+        background-position: 0 0;
+    }
+
+    10% {
+        background-position: -5% -10%;
+    }
+
+    20% {
+        background-position: -15% 5%;
+    }
+
+    30% {
+        background-position: 7% -25%;
+    }
+
+    40% {
+        background-position: 20% 25%;
+    }
+
+    50% {
+        background-position: -25% 10%;
+    }
+
+    60% {
+        background-position: 15% 5%;
+    }
+
+    70% {
+        background-position: 0% 15%;
+    }
+
+    80% {
+        background-position: 25% 35%;
+    }
+
+    90% {
+        background-position: -10% 10%;
+    }
+}
+
+/* Upside Down Flip */
+@keyframes flip-upside-down {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+.upside-down {
+    transform: rotate(180deg);
+    filter: invert(1) hue-rotate(180deg);
+    transition: all 0.5s ease;
+}
+
+/* Stagger Animation Helper */
+.stagger-1 {
+    animation-delay: 0.1s;
+}
+
+.stagger-2 {
+    animation-delay: 0.2s;
+}
+
+.stagger-3 {
+    animation-delay: 0.3s;
+}
+
+.stagger-4 {
+    animation-delay: 0.4s;
+}
+
+.stagger-5 {
+    animation-delay: 0.5s;
+}
+
+.stagger-6 {
+    animation-delay: 0.6s;
+}
+
+.stagger-7 {
+    animation-delay: 0.7s;
+}

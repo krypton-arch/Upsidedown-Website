@@ -1,0 +1,125 @@
+/* ===================================
+   UPSIDE DOWN COMMUNICATOR
+   1983 Retro Terminal Theme
+   =================================== */
+
+:root {
+  --retro-black: #000000;
+  --retro-green: #33FF00;
+  --retro-green-dim: #1a4d00;
+  --retro-green-glow: #4dff19;
+  --retro-amber: #FFB000;
+  --retro-red: #FF0000;
+  --retro-white: #FFFFFF;
+  --retro-dark-gray: #0a0a0a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Space Mono', 'IBM Plex Mono', 'VT323', 'Courier New', monospace;
+  font-size: 18px;
+  background: var(--retro-black);
+  color: var(--retro-green);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+.retro-title {
+  font-family: 'Press Start 2P', cursive;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.4;
+}
+
+h1 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+}
+
+h2 {
+  font-size: clamp(0.8rem, 2.5vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: clamp(0.6rem, 2vw, 0.9rem);
+}
+
+a {
+  color: var(--retro-green);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--retro-amber);
+}
+
+::selection {
+  background: var(--retro-green);
+  color: var(--retro-black);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Section Styling */
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid var(--retro-green-dim);
+}
+
+/* Terminal Box */
+.terminal-box {
+  background: var(--retro-black);
+  border: 2px solid var(--retro-green);
+  padding: 20px;
+  position: relative;
+}
+
+.terminal-box::before {
+  content: '█ TERMINAL';
+  position: absolute;
+  top: -12px;
+  left: 10px;
+  background: var(--retro-black);
+  padding: 0 10px;
+  font-size: 14px;
+  color: var(--retro-green-dim);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--retro-black);
+  border: 1px solid var(--retro-green-dim);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--retro-green);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--retro-green-glow);
+}
